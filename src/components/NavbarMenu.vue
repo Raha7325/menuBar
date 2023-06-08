@@ -25,7 +25,8 @@
       ><swiper-slide
         ><img
           src="../assets/salad.svg" /></swiper-slide
-      ><swiper-slide
+      >
+      <!-- <swiper-slide
         ><img
           src="https://swiperjs.com/demos/images/nature-3.jpg" /></swiper-slide
       ><swiper-slide
@@ -45,7 +46,7 @@
           src="https://swiperjs.com/demos/images/nature-8.jpg" /></swiper-slide
       ><swiper-slide
         ><img src="https://swiperjs.com/demos/images/nature-9.jpg"
-      /></swiper-slide>
+      /></swiper-slide> -->
     </swiper>
   </template>
   <script>
