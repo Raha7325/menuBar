@@ -15,7 +15,7 @@
       :modules="modules"
       class="mySwiper bg-red-300"
     >
-      <swiper-slide
+      <swiper-slide class="rounded-lg"
         >
         <div class="h-20 w-20"><img
           src="../assets/fries.svg"/> 
@@ -48,8 +48,22 @@
         ><img src="https://swiperjs.com/demos/images/nature-9.jpg"
       /></swiper-slide> -->
     </swiper>
+    <div class="container mx-auto px-auto">
+      <div class="grid grid-cols-2">
+        <div class="flex">
+          <div class="w-10 h-10 mx-4">
+            <img src="../assets/grill-fries.jpg"/>
+          </div>
+          <div class="grid grid-cols-3">
+            <h2>سیب زمینی گریل</h2>
+            <p>Grilled potato fries</p>
+            <h2>۹۰ هزار تومان</h2>
+          </div>
+        </div>
+      </div>
+    </div>
   </template>
-  <script>
+  <script lang="ts">
   // Import Swiper Vue.js components
   import { Swiper, SwiperSlide } from "swiper/vue";
   

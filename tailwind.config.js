@@ -7,4 +7,10 @@ module.exports = {
 			keyframes: true,
 		},
 	},
+	theme: {
+		container: {
+		  center: true,
+		},
+	  },
+
 };

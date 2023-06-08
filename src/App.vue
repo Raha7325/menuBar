@@ -5,8 +5,11 @@ import NavbarMenu from './components/NavbarMenu.vue'
 </script>
 
 <template>
+    <div class="grid grid-rows-2">
       <MenuBar />
       <NavbarMenu />
+    </div>
+ 
 
   <!-- <header>
     <div class="wrapper">

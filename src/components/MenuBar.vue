@@ -8,6 +8,5 @@
       </div>
       <hr />
    </div>
-   
 </template>
 
