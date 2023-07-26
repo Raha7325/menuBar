@@ -1,112 +1,81 @@
 <template>
-    <swiper
-      :effect="'coverflow'"
-      :grabCursor="true"
-      :centeredSlides="true"
-      :slidesPerView="'auto'"
-      :coverflowEffect="{
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      }"
-      :pagination="true"
-      :modules="modules"
-      class="mySwiper bg-red-300"
-    >
-      <swiper-slide class="rounded-lg"
-        >
-        <div class="h-20 w-20"><img
-          src="../assets/fries.svg"/> 
-        </div>
-        <div class="flex justify-center font-bold text-2xl">پیش غذا</div>
-        </swiper-slide
-      ><swiper-slide
-        ><img
-          src="../assets/salad.svg" /></swiper-slide
-      >
-      <!-- <swiper-slide
-        ><img
-          src="https://swiperjs.com/demos/images/nature-3.jpg" /></swiper-slide
-      ><swiper-slide
-        ><img
-          src="https://swiperjs.com/demos/images/nature-4.jpg" /></swiper-slide
-      ><swiper-slide
-        ><img
-          src="https://swiperjs.com/demos/images/nature-5.jpg" /></swiper-slide
-      ><swiper-slide
-        ><img
-          src="https://swiperjs.com/demos/images/nature-6.jpg" /></swiper-slide
-      ><swiper-slide
-        ><img
-          src="https://swiperjs.com/demos/images/nature-7.jpg" /></swiper-slide
-      ><swiper-slide
-        ><img
-          src="https://swiperjs.com/demos/images/nature-8.jpg" /></swiper-slide
-      ><swiper-slide
-        ><img src="https://swiperjs.com/demos/images/nature-9.jpg"
-      /></swiper-slide> -->
-    </swiper>
-    <div class="container mx-auto px-auto">
-      <div class="grid grid-cols-2">
-        <div class="flex">
-          <div class="w-10 h-10 mx-4">
-            <img src="../assets/grill-fries.jpg"/>
+  <div class="container-fluid bg-white">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
+        <div class="flex bg-gray-100 p-4 rounded-xl justify-end">
+          <div class="m-4 relative">
+            <h2 class="flex justify-end text-amber-600">سیب زمینی گریل</h2>
+            <p class="flex justify-end">Grilled potato fries</p>
+            <h2 class="flex justify-end items-center text-gray-600 bottom-0 right-0 absolute">
+              هزار تومان <span>90 </span>
+            </h2>
           </div>
-          <div class="grid grid-cols-3">
-            <h2>سیب زمینی گریل</h2>
-            <p>Grilled potato fries</p>
-            <h2>۹۰ هزار تومان</h2>
+          <div class="w-[150px] h-[200px] right-0">
+            <img src="../assets/grill-fries.jpg" class="h-full w-full object-cover rounded-xl" />
+          </div>
+        </div>
+        <div class="flex bg-gray-100 p-4 rounded-xl justify-end">
+          <div class="m-4 relative">
+            <h2 class="flex justify-end text-amber-600">سیب زمینی گریل</h2>
+            <p class="flex justify-end">Grilled potato fries</p>
+            <h2 class="flex justify-end items-center text-gray-600 bottom-0 right-0 absolute">
+              هزار تومان <span>90 </span>
+            </h2>
+          </div>
+          <div class="w-[150px] h-[200px] right-0">
+            <img src="../assets/grill-fries.jpg" class="h-full w-full object-cover rounded-xl" />
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-10" v-show="salad">
+        <div class="flex bg-gray-100 p-4 rounded-xl justify-end">
+          <div class="m-4 relative">
+            <h2 class="flex justify-end text-amber-600"> سالاد</h2>
+            <p class="flex justify-end">Grilled potato fries</p>
+            <h2 class="flex justify-end items-center text-gray-600 bottom-0 right-0 absolute">
+              هزار تومان <span>90 </span>
+            </h2>
+          </div>
+          <div class="w-[150px] h-[200px] right-0">
+            <img src="../assets/grill-fries.jpg" class="h-full w-full object-cover rounded-xl" />
+          </div>
+        </div>
+        <div class="flex bg-gray-100 p-4 rounded-xl justify-end">
+          <div class="m-4 relative">
+            <h2 class="flex justify-end text-amber-600">سیب زمینی گریل</h2>
+            <p class="flex justify-end">Grilled potato fries</p>
+            <h2 class="flex justify-end items-center text-gray-600 bottom-0 right-0 absolute">
+              هزار تومان <span>90 </span>
+            </h2>
+          </div>
+          <div class="w-[150px] h-[200px] right-0">
+            <img src="../assets/grill-fries.jpg" class="h-full w-full object-cover rounded-xl" />
           </div>
         </div>
       </div>
     </div>
-  </template>
-  <script lang="ts">
-  // Import Swiper Vue.js components
-  import { Swiper, SwiperSlide } from "swiper/vue";
-  
-  // Import Swiper styles
-  import "swiper/css";
-  
-  import "swiper/css/effect-coverflow";
-  import "swiper/css/pagination";
-  
-  // import "./style.css";
-  
-  // import required modules
-  import { EffectCoverflow, Pagination } from "swiper";
-  
-  export default {
-    components: {
-      Swiper,
-      SwiperSlide,
+  </div>
+</template>
+<script lang="ts">
+export default {
+  setup() {
+    return {
+      pishGhaza: true,
+      salad: false
+    }
+  },
+  methods: {
+    changeStatusPishGhaza() {
+      this.pishGhaza = true
     },
-    setup() {
-      return {
-        modules: [EffectCoverflow, Pagination],
-      };
-    },
-  };
-  </script>
+    showSaladBar() {
+      this.salad =true;
+      console.log(this.salad)
+    }
+  }
+}
+</script>
 <style>
-  #app { height: 100% }
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-
 .swiper {
   width: 100%;
   padding-top: 50px;
@@ -124,5 +93,4 @@ body {
   display: block;
   width: 100%;
 }
-
 </style>

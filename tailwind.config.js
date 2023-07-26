@@ -1,16 +1,122 @@
-/* eslint-disable no-undef */
+/** @type {import('tailwindcss').Config} */
+
 module.exports = {
-	mode: 'jit',
-	purge: {
-		content: ['./src/**/*.{vue,js,ts,jsx,tsx,.html}'],
-		options: {
-			keyframes: true,
+	content: [
+		// './index.html',
+		// './src/**/*.{vue,js,ts,jsx,tsx}',
+		'./public/**/*.html', './src/**/*.vue'],
+	theme: {
+		colors: {
+			transparent: 'transparent',
+			white: '#fff',
+			black: '#000',
+			background: {
+				'website': '#E9ECF1',
+				'submenu': '#C9CCD1',
+				'blur': '#10293AB2',
+				'input': '#E9ECF180',
+			},
+			primary: {
+				50: '#E8F4F5',
+				100: '#C7E5E5',
+				200: '#A1D3D4',
+				300: '#7BC1C3',
+				600: '#43A7A9',
+				700: '#378A8C',
+				800: '#2C6D6F',
+				900: '#205051',
+			},
+			secondary: {
+				50: '#E4EBEF',
+				100: '#BDCDD7',
+				200: '#91ABBD',
+				300: '#6489A2',
+				600: '#22577A',
+				700: '#19405A',
+				800: '#10293A',
+				900: '#07131A',
+			},
+			danger: {
+				50: '#FCE7E9',
+				100: '#F8C4C8',
+				200: '#F39CA3',
+				300: '#EE747E',
+				600: '#E63946',
+				700: '#DB1C2A',
+				800: '#B61723',
+				900: '#92121C',
+			},
+			info: {
+				50: '#E2EDF8',
+				100: '#B8D3ED',
+				200: '#88B6E1',
+				300: '#5899D4',
+				600: '#116DC2',
+				700: '#0E589C',
+				800: '#0A4377',
+				900: '#072E51',
+			},
+			warning: {
+				50: '#FFF5E0',
+				100: '#FFE6B3',
+				200: '#FFD580',
+				300: '#FFC44D',
+				600: '#FFAB00',
+				700: '#D69000',
+				800: '#AD7400',
+				900: '#855900',
+			},
+			success: {
+				50: '#E7F6F2',
+				100: '#C3E8DE',
+				200: '#9BD9C8',
+				300: '#72CAB2',
+				600: '#36B391',
+				700: '#2D9478',
+				800: '#23745E',
+				900: '#1A5545',
+			},
+			gray: {
+				0: '#E5E5E5',
+				50: '#E9EBED',
+				100: '#C9CCD1',
+				200: '#A5AAB2',
+				300: '#808893',
+				600: '#4A5565',
+				700: '#39414D',
+				800: '#272D36',
+				900: '#161A1E',
+			},
+			neutral: {
+				50: '#E3E7EA',
+				100: '#B9C4CA',
+				200: '#8B9CA7',
+				300: '#5C7484',
+				600: '#16394F',
+				700: '#122D3F',
+				800: '#0D222F',
+				900: '#09161F',
+			},
+		},
+		container: {
+			center: true,
+			padding: {
+				sm: '4.5rem',
+				md: '1rem',
+				lg: '1rem',
+				xl: '3rem',
+				'2xl': '4.5rem',
+			},
+		},
+		extend: {
+			backgroundImage: {
+				'curve-pattern': 'url(\'/images/new-images/bg-homePage.svg\')',
+			},
+			rotate: {
+				'3': '3deg',
+				'5': '5deg',
+			},
 		},
 	},
-	theme: {
-		container: {
-		  center: true,
-		},
-	  },
-
+	plugins: [],
 };

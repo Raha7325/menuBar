@@ -7,6 +7,12 @@
          </div>
       </div>
       <hr />
+      <swiper-menu-list />
+      <!-- <NavbarMenu /> -->
    </div>
 </template>
 
+<script lang="ts" setup>
+// import NavbarMenu from './NavbarMenu.vue'
+import SwiperMenuList from './SwiperMenuList.vue';
+</script>
